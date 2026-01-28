@@ -1,0 +1,123 @@
+body {
+  max-width: 100vw
+}
+
+.user-sign-in {
+  margin: auto;
+  width: 98vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo{
+  width: 98vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px
+}
+
+#logo img{
+  width: 100px
+}
+
+.sign-in-form,
+.sign-up-form {
+  margin-top: 10px;
+  width: 300px;
+  background: #ffffff81;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0000001a;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  transition: .5s ease;
+  gap: 10px;
+}
+
+.sign-up-form {
+  display: none;
+  overflow: auto;
+  scroll-behavior: smooth;
+  justify-content: initial;
+}
+
+.sign-in-form input,
+.sign-up-form input {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+}
+
+.sign-in-form label,
+.sign-up-form label {
+  color: #000;
+  font-weight: 900;
+}
+
+.sign-in-form button,
+.sign-up-form button {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  background: #6d660d;
+  color: #fff;
+  text-align: center;
+  transition: .5s ease;
+  align-self: center;
+}
+
+.sign-in-form #google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #034188;
+  margin-top: -50px;
+  width: 90%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold
+}
+
+.sign-in-form button:hover {
+  background: #262600;
+
+}
+
+.sign-up-form button:hover {
+  background: #262600;
+
+}
+
+.sign-up-form::-webkit-scrollbar {
+  display: none
+}
+
+.sign-up-form label {
+  color: #000;
+}
+
+.sign-in-form p,
+.sign-up-form p {
+  color: #6d660d;
+  font-size: .8rem;
+  align-self: center;
+}
+
+.sign-in-form p span,
+.sign-up-form p span {
+  color: #000;
+  font-size: .8rem;
+  text-decoration: dashed;
+  cursor: pointer;
+}

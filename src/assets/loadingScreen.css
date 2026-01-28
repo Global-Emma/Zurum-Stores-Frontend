@@ -1,0 +1,63 @@
+#loading-container {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#loading-container #spinner {
+  width: 40px !important;
+  height: 40px !important;
+  border: 4px solid #00000071 !important;
+  border-top: 4px solid #034188 !important;
+  border-radius: 50% !important;
+  animation: spin 1s linear infinite !important;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.body{
+  position: fixed;
+  top: 0 ;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #cccccc73 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.pop-up{
+  width: 100px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popup 1s infinite 
+}
+
+.pop-up img{
+  width: 100%;
+  height: 100%;
+
+}
+
+@keyframes popup {
+  from {
+    transform: scale(.5);
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
