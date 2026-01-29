@@ -43,7 +43,7 @@ const NavBar = ({ cart, logIn, details }) => {
 
   return (
     <div className="navbar">
-      <NavLink to="/" className="logo-link"><img src="images/zurum-stores-high-resolution-logo-transparent.png" alt="Zurum-logo" />
+      <NavLink to="/" className="logo-link"><img src="/images/zurum-stores-high-resolution-logo-transparent.png" alt="Zurum-logo" />
       </NavLink>
       <div className="search">
         <input type="text" placeholder="Search" id="search-text" onKeyUp={() => {
@@ -52,7 +52,7 @@ const NavBar = ({ cart, logIn, details }) => {
         <div className="img-div" onClick={() => {
           searchBarActive()
         }}>
-          <img src="images/icons/search-icon.png" alt="" />
+          <img src="/images/icons/search-icon.png" alt="" />
         </div>
       </div>
 
@@ -84,7 +84,7 @@ const NavBar = ({ cart, logIn, details }) => {
       </div>
       <div className="cart-icon">
         <NavLink to="/cart">
-          <img src="images/icons/cart-icon.png" alt="" />
+          <img src="/images/icons/cart-icon.png" alt="" />
           <div className="cart-quantity js-cart-quantity" style={{ color: '#502501' }}>{cartQuantity}</div>
           <div className="ptag">
             <p>Cart</p>
