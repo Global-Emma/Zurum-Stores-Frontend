@@ -88,13 +88,13 @@ function App() {
 
   return (
     <Routes>
-      <Route path='/' element={<HomePage cart={cart} error={errorMsg} API_URL={API_URL} loadUserData={getUserData} details={details} token={token} login={isLoggedIn} />} />
+      <Route path='/' element={<HomePage cart={cart} API_URL={API_URL} loadUserData={getUserData} details={details} token={token} login={isLoggedIn} />} />
 
       <Route path='/cart' element={<Cart address={address} API_URL={API_URL} cart={cart} details={details} loadUserData={getUserData} deliveryOptions={deliveryOptions} error={errorMsg} loadDelivery={fetchDeliveryOptions} orders={returns} token={token} />} />
 
       <Route path='/orders' element={<Orders cart={cart} API_URL={API_URL} details={details} loadUserData={getUserData} deliveryOptions={deliveryOptions} loadDelivery={fetchDeliveryOptions} error={errorMsg} token={token} returns={returns} login={isLoggedIn} />} />
 
-      <Route path='/users' element={<Users cart={cart} API_URL={API_URL} error={errorMsg} token={token} details={details} login={isLoggedIn} />} />
+      <Route path='/users' element={<Users cart={cart} API_URL={API_URL} token={token} details={details} login={isLoggedIn} />} />
 
       <Route path='/user-details' element={<UserDetails API_URL={API_URL} error={errorMsg} details={details} address={address} cart={cart} token={token} login={isLoggedIn} loadUserData={getUserData} />} />
 

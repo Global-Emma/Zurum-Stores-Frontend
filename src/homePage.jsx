@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import LoadingScreen from "./assets/LoadingScreen";
 import LoadingPopup from "./assets/LoadingPopup";
 
-const HomePage = ({ loadUserData, cart, token, login, details, API_URL, error }) => {
+const HomePage = ({ loadUserData, cart, token, login, details, API_URL }) => {
 
   const [homeUpdate, setHomeUpdate] = useState(0);
 
@@ -41,10 +41,6 @@ const HomePage = ({ loadUserData, cart, token, login, details, API_URL, error })
   const navigate = useNavigate()
 
   if (isLoading) return <LoadingScreen />
-
-  if (error) {
-    return <h2>Some Error Occured...Please Check Your Internet connection and Try Again</h2>
-  }
 
   if (errorMsg) {
     setTimeout(() => {
@@ -116,8 +112,8 @@ const HomePage = ({ loadUserData, cart, token, login, details, API_URL, error })
                   setHomeUpdate(homeUpdate + 1);
                 } catch (error) {
                   if (axios.isAxiosError(error)) {
-                    if (error.response?.data?.message) {
-                      setErrorMsg(error.response.data.message)
+                    if (error.response?.data?.message === 'JWT Expired') {
+                      setErrorMsg("User Logged Out...Please Login Again")
                       setPopup(false)
                     }
                   }

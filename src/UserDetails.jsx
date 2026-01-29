@@ -60,8 +60,12 @@ const UserDetails = ({ loadUserData, details, token, login, address, API_URL, er
       alert('User Details Updated Successfully')
       setUser(true)
     } catch (error) {
-      setIsLoading(false)
-      setErrorMsg(error.response.data.message)
+      if (axios.isAxiosError(error)) {
+        if (error.response?.data?.message) {
+          setIsLoading(false)
+          setErrorMsg(error.response.data.message)
+        }
+      }
     }
   };
 
@@ -79,7 +83,6 @@ const UserDetails = ({ loadUserData, details, token, login, address, API_URL, er
   }
   return (
     <>
-
       <NavLink to="/" id="logo"><img src="images/zurum-stores-high-resolution-logo-transparent.png" alt="Zurum-logo" />
       </NavLink>
       {/* Body */}
@@ -115,7 +118,7 @@ const UserDetails = ({ loadUserData, details, token, login, address, API_URL, er
               <pre><b>Username:</b><br /> {details.username}</pre>
               <pre><b>email:</b><br /> {details.email}</pre>
               <pre><b>Phone No:</b><br /> {details.phone}</pre>
-              <pre><b>Address:</b><br /> {address ? `${address.street}, ${address.city}, ${address.state}, ${address.country}` : <NavLink to={'/address'}>No Address Added...Click Here To Add</NavLink>}</pre>
+              <pre><b>Address:</b><br /> {details.address ? `${address.street}, ${address.city}, ${address.state}, ${address.country}` : <NavLink to={'/address'}>No Address Added...Click Here To Add</NavLink>}</pre>
             </div>
             <button className="logout-btn" onClick={() => {
               setPopup(true)
@@ -138,7 +141,17 @@ const UserDetails = ({ loadUserData, details, token, login, address, API_URL, er
                   }
                 })
               } catch (error) {
-                console.log(error)
+                if (axios.isAxiosError(error)) {
+                  localStorage.removeItem('token');
+                  localStorage.setItem('isLoggedIn', JSON.stringify(false))
+                  if (error.response?.data?.message) {
+                    setErrorMsg(error.response.data.message)
+                    setPopup(false)
+                    alert(errorMsg)
+                    window.location.href = '/users'
+                  }
+                }
+
               }
             }}>logout</button>
           </div>
