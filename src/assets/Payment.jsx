@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useCallback } from "react";
 
 
-const Payment = ({ token, loadUserData }) => {
+const Payment = ({ token, loadUserData, API_URL }) => {
 
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -18,7 +18,7 @@ const Payment = ({ token, loadUserData }) => {
 
   const verifyPayment = useCallback( async () => {
     try {
-      const response = await axios.get(`/api/payment/verify-payment/${reference}`, {
+      const response = await axios.get(`${API_URL}/payment/verify-payment/${reference}`, {
         headers: {
           Authorization: `Bearer ${token}`
         },

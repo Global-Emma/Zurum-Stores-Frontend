@@ -107,6 +107,7 @@ const Users = ({ API_URL }) => {
             () => {
               setPopup(true)
               window.location.href = `${API_URL}/users/google-login`;
+              setPopup(false)
             }
           } >
             <img src="https://cdn.brandfetch.io/domain/google.com?c=1idk8KN1acSgJG8iGOF" alt="Logo by Brandfetch" style={{ width: "20px", marginRight: "10px" }} />
