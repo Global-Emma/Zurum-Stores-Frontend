@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import LoadingScreen from "./assets/LoadingScreen";
 import LoadingPopup from "./assets/LoadingPopup";
 
-const HomePage = ({ loadUserData, cart, token, login, details, API_URL }) => {
+const HomePage = ({ loadUserData, cart, token, error, login, details, API_URL }) => {
 
   const [homeUpdate, setHomeUpdate] = useState(0);
 
