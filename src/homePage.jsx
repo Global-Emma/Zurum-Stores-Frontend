@@ -48,6 +48,10 @@ const HomePage = ({ loadUserData, cart, token, login, details, API_URL }) => {
     }, 5000)
     return <h2>{errorMsg}</h2>
   }
+
+  if (error === "Internal Server Error....please Check your Internet Connection And Try Again") {
+    return <h2>Some Error Occured...Please Check Your Internet connection and Try Again</h2>
+  }
   
   return (
     <>
@@ -114,6 +118,9 @@ const HomePage = ({ loadUserData, cart, token, login, details, API_URL }) => {
                   if (axios.isAxiosError(error)) {
                     if (error.response?.data?.message === 'JWT Expired') {
                       setErrorMsg("User Logged Out...Please Login Again")
+                      setPopup(false)
+                    } else{
+                      setErrorMsg(error.response.data.message)
                       setPopup(false)
                     }
                   }

@@ -51,7 +51,6 @@ const Cart = ({ cart, loadUserData, deliveryOptions, token, loadDelivery, detail
     return <h2>Some Error Occured...Please Check Your Internet connection and Try Again</h2>
   }
 
-
   return (
     <>
       <nav className="nav-bar-cart">
@@ -112,7 +111,10 @@ const Cart = ({ cart, loadUserData, deliveryOptions, token, loadDelivery, detail
                             setCartUpdate(cartUpdate + 1)
                           } catch (error) {
                             if (axios.isAxiosError(error)) {
-                              if (error.response?.data?.message) {
+                              if (error.response?.data?.message === 'JWT Expired') {
+                                setErrorMsg("User Logged Out...Please Login Again")
+                                setPopup(false)
+                              } else {
                                 setErrorMsg(error.response.data.message)
                                 setPopup(false)
                               }
@@ -148,7 +150,10 @@ const Cart = ({ cart, loadUserData, deliveryOptions, token, loadDelivery, detail
                           setCartUpdate(cartUpdate + 1)
                         } catch (error) {
                           if (axios.isAxiosError(error)) {
-                            if (error.response?.data?.message) {
+                            if (error.response?.data?.message === 'JWT Expired') {
+                              setErrorMsg("User Logged Out...Please Login Again")
+                              setPopup(false)
+                            } else {
                               setErrorMsg(error.response.data.message)
                               setPopup(false)
                             }
@@ -255,7 +260,10 @@ const Cart = ({ cart, loadUserData, deliveryOptions, token, loadDelivery, detail
 
               } catch (error) {
                 if (axios.isAxiosError(error)) {
-                  if (error.response?.data?.message) {
+                  if (error.response?.data?.message === 'JWT Expired') {
+                    setErrorMsg("User Logged Out...Please Login Again")
+                    setPopup(false)
+                  } else {
                     setErrorMsg(error.response.data.message)
                     setPopup(false)
                   }
