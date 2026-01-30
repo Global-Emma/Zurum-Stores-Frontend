@@ -9,6 +9,7 @@ The frontend is responsible for the user interface, routing, authentication hand
 ## 🔗 Live URL
 
 * **Frontend (Vercel):** [https://zurum-stores-frontend.vercel.app](https://zurum-stores-frontend.vercel.app)
+* **Backend Github:** [https://github.com/Global-Emma/zurum-stores-backend](https://github.com/Global-Emma/zurum-stores-backend)
 
 ---
 
