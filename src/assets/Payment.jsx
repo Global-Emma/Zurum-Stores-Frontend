@@ -27,7 +27,7 @@ const Payment = ({ token, loadUserData, API_URL }) => {
 
       if (response.data.success === true) {
         // Handle successful payment verification
-        axios.delete(`${API_URL}/api/cart/delete-all`, {
+        axios.delete(`${API_URL}/cart/delete-all`, {
           headers: {
             Authorization: `Bearer ${token}`
           },

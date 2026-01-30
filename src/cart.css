@@ -35,9 +35,6 @@
   margin-left: 45px;
 }
 
-.nav-bar-cart .mobile{
-  display: none;
-}
 
 .nav-bar-cart .item-no{
   width: 60%;
@@ -73,16 +70,6 @@
 }
 
 @media(max-width: 555px) {
-  .mobile{
-    display: block;
-    width: 60px;
-    height: 90%;
-  }
-  
-  .full{
-    display: none;
-  }
-
   .item-no, .item-no a{
     font-size: 1.2rem;
     width: 1000px;

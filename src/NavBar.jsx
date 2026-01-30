@@ -59,7 +59,7 @@ const NavBar = ({ cart, logIn, details }) => {
 
       <div className="users" onClick={
         () => {
-          if (logIn === false) {
+          if (!details.username) {
             navigate('/users')
           } else {
             navigate('/user-details')
@@ -67,10 +67,10 @@ const NavBar = ({ cart, logIn, details }) => {
         }
       }>
 
-        {logIn ? <FaUserCheck className='user-icons' /> : <FaUser className='user-icons' />}
+        {details.username ? <FaUserCheck className='user-icons' /> : <FaUser className='user-icons' />}
 
         {logIn && <div className="user-details" style={userDetails}>
-          <p>Hey, <span>{logIn === true && details ? details.username : 'user'}</span></p>
+          <p>Hey, <span>{details.username ? details.username : 'user'}</span></p>
         </div>}
       </div>
 
