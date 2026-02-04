@@ -26,7 +26,7 @@ const Orders = ({ cart, loadUserData, details, deliveryOptions, returns, token, 
     }, 5000)
     return <h2>{errorMsg}</h2>
   }
-  
+
   return (
     <Fragment>
 
@@ -137,8 +137,6 @@ const Orders = ({ cart, loadUserData, details, deliveryOptions, returns, token, 
               </div>
             </div>
           )
-
-
         })}
 
       </div>

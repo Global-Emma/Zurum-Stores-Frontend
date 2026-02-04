@@ -17,7 +17,7 @@ axios.interceptors.response.use(
 
       try {
         // ask Backend for the new access token
-        axios.post("http://localhost:3000/api/users/refresh",
+        axios.post(`${import.meta.env.VITE_API_URL}/users/refresh`,
           {},
           {withCredentials: true }
         )
