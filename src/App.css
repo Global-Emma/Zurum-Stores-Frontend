@@ -148,7 +148,7 @@ body {
   font-size: min(3vw, 24px);
   font-weight: 700;
   color: #f59e0b !important;
-  transform: translate(200%, -160%)
+  transform: translate(200%, -160%) !important;
 }
 
 .users-links{
@@ -207,7 +207,7 @@ body {
   }
 
   #cart-icon .cart-quantity{
-    transform: translate(190%, -150%);
+    transform: translate(190%, -150%) !important;
   }
 
   .search input{
@@ -222,7 +222,7 @@ body {
   }
 
   #cart-icon .cart-quantity{
-    transform: translate(180%, -140%);
+    transform: translate(180%, -140%) !important;
   }
 }
 

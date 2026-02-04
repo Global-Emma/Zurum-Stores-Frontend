@@ -38,7 +38,7 @@
 
 .pop-up{
   width: 100px;
-  height: 68px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -95,7 +95,7 @@ button img{
 
   .con-prod-body {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
 
   .body-right {

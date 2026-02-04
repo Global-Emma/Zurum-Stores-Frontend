@@ -95,7 +95,7 @@ const Orders = ({ cart, loadUserData, details, deliveryOptions, returns, token, 
                         </div>
                         <div className="mobile-body">
                           <div className="body-center">
-                            {product.name}
+                            <b>{product.name}</b>
                             <p>Arriving on: {dateString} </p>
                             <p>Quantity: {item.quantity}</p>
                             <button onClick={

@@ -100,7 +100,6 @@ const HomePage = ({ loadUserData, cart, token, error, login, details, API_URL })
                 }
                 setPopup(true)
                 try {
-
                   await axios.post(`${API_URL}/cart/add-to-cart`, {
                     productId: product._id,
                     quantity: selectedNo,

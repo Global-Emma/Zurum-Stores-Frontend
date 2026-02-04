@@ -114,7 +114,7 @@ const UserDetails = ({ loadUserData, details, token, login, address, API_URL, er
               <FaUser className='user-icons' />
             </div>
             <div className="user-name">
-              <p style={{ alignSelf: 'center' }}>{details.firstname ? `Hi, ${details.lastname} ${details.firstname}` : `Hi, ${details.username}`}</p>
+              <p style={{ alignSelf: 'center' }}>{details.firstname && `Hi, ${details.lastname} ${details.firstname}`}</p>
               <pre><b>Username:</b><br /> {details.username}</pre>
               <pre><b>email:</b><br /> {details.email}</pre>
               <pre><b>Phone No:</b><br /> {details.phone}</pre>
