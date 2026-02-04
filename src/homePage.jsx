@@ -56,7 +56,7 @@ const HomePage = ({ loadUserData, cart, token, error, login, details, API_URL })
   return (
     <>
 
-      <NavBar cart={cart} logIn={login} details={details} />
+      <NavBar token={token} API_URL={API_URL} cart={cart} logIn={login} details={details} />
 
 
       {/* Products Container  */}

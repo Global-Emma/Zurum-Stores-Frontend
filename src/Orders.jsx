@@ -30,7 +30,7 @@ const Orders = ({ cart, loadUserData, details, deliveryOptions, returns, token, 
   return (
     <Fragment>
 
-      <NavBar cart={cart} logIn={login} details={details} />
+      <NavBar token={token} API_URL={API_URL} cart={cart} logIn={login} details={details} />
 
       {/* Orders Body  */}
       <div className="order-text">
