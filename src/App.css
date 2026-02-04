@@ -284,6 +284,7 @@ body {
 }
 
 .name {
+  width: fit-content;
   height: 70px;
   /* color: #7c0376; */
 }
