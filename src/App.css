@@ -183,14 +183,14 @@ body {
 }
 
 #users-links button{
-  border: none;
-  width: 80%;
-  height: 30px;
-  box-shadow: 0px 2px 8px #00000024;
-  background-color: #012f64;
-  border-radius: 5px;
-  align-self: center;
-  cursor: pointer;
+  border: none !important;
+  width: 80% !important;
+  height: 30px !important;
+  box-shadow: 0px 2px 8px #00000024 !important;
+  background-color: #012f64 !important;
+  border-radius: 5px !important;
+  align-self: center !important;
+  cursor: pointer !important;
 }
 
 #users-links button:hover{
