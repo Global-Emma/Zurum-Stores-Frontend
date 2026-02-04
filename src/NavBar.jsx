@@ -58,7 +58,7 @@ const NavBar = ({ cart, API_URL, details, token }) => {
       }}>
         {details.username || details.email ? <LuUserRoundCheck className='user-icon' /> : <LuUserRound className='user-icon' />}
 
-        <div className={showLinks ? 'users-links' : 'users-links-off'}>
+        <div id={showLinks ? 'users-links' : 'users-links-off'}>
           <a href="/user-details">My Account</a>
           <a href="/orders">My Orders</a>
           {details.username || details.email ? <button onClick={() => {

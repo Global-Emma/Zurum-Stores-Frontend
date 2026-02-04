@@ -151,7 +151,7 @@ body {
   transform: translate(200%, -160%) !important;
 }
 
-.users-links{
+.users #users-links{
   width: 20vw;
   height: 150px;
   background-color: #ffffffee;
@@ -164,11 +164,11 @@ body {
   justify-content: space-evenly;
 }
 
-.users-links-off{
+.users #users-links-off{
   display: none
 }
 
-.users-links a{
+#users-links a{
   text-decoration: none;
   border-bottom: 1px solid #ccc;
   text-align: center;
@@ -178,11 +178,11 @@ body {
   font-size: .9rem
 }
 
-.users-links a:hover{
+#users-links a:hover{
   font-size: .93rem;
 }
 
-.users-links button{
+#users-links button{
   border: none;
   width: 80%;
   height: 30px;
@@ -193,16 +193,16 @@ body {
   cursor: pointer;
 }
 
-.users-links button:hover{
+#users-links button:hover{
   transform: scale(1.1)
 }
 
 @media (min-width: 700px){
-  .users-links{
+  .users #users-links{
     top: 70px;
   }
 
-  .users-links a{
+  #users-links a{
     font-size: 1rem;
   }
 
@@ -216,7 +216,7 @@ body {
 }
 
 @media (min-width: 900px){
-  .users-links{
+  .users #users-links{
     width: 18vw;
     top: 75px
   }
