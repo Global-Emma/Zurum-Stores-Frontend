@@ -1,12 +1,78 @@
-# React + Vite
+# 🖥️ Zurum Stores – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend application** for **Zurum Stores**, a production-ready e-commerce platform.
 
-Currently, two official plugins are available:
+The frontend is responsible for the user interface, routing, authentication handling, admin dashboard UI, and integration with backend APIs.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🔗 Live URL
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend (Vercel):** [https://zurum-stores-frontend.vercel.app](https://zurum-stores-frontend.vercel.app)
+* **Backend Github:** [https://github.com/Global-Emma/zurum-stores-backend](https://github.com/Global-Emma/zurum-stores-backend)
+
+---
+
+## ✨ Features
+
+* Responsive user interface
+* Product listing and product details pages
+* Shopping cart functionality
+* Order history and order tracking UI
+* Secure authentication state handling
+* Google OAuth login
+* Role-based UI rendering (User vs Admin)
+* Admin dashboard UI (products, orders, users)
+* Paystack payment integration
+* Protected routes using React Router
+
+---
+
+## 🧱 Tech Stack
+
+* **React (Vite)**
+* **JavaScript (ES6+)**
+* **React Router**
+* **Axios / Fetch API**
+* **Tailwind CSS / CSS**
+
+---
+
+## 🍪 Authentication & Cookies
+
+* Uses **HTTP-only cookies** for authentication
+* Requests sent with `withCredentials: true`
+* Works securely across domains (Vercel ↔ Render)
+
+---
+
+## 📸 Static Assets
+
+* Product images are stored in the `public/` folder
+* Referenced using root-relative paths:
+
+```jsx
+<img src="/images/products/product-name.jpg" />
+```
+
+---
+
+## 🚀 Deployment
+
+* Hosted on **Vercel**
+* Automatic redeploy on every GitHub push
+* SPA routing handled via `vercel.json`
+
+---
+
+## 🧪 Testing
+
+* UI and auth flows tested in browser
+* Payment flow tested using Paystack test mode
+
+---
+
+## 👨‍💻 Author
+
+**Glory Emmanuel**
+* *FullStack Developer*
