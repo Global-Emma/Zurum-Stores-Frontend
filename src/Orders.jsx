@@ -17,14 +17,18 @@ const Orders = ({ cart, loadUserData, details, deliveryOptions, returns, token, 
   const [errorMsg, setErrorMsg] = useState('')
 
   if (error) {
-    return <h2>Some Error Occured...Please Check Your Internet connection and Try Again</h2>
+    return <div id="msg-body">
+      <h2 id='msg-txt'>Some Error Occured...</h2>
+    </div>
   }
 
   if (errorMsg) {
     setTimeout(() => {
       setErrorMsg('')
     }, 5000)
-    return <h2>{errorMsg}</h2>
+    return <div id="msg-body">
+      <h2 id='msg-txt'>{errorMsg}</h2>
+    </div>
   }
 
   return (

@@ -71,14 +71,16 @@ const UserDetails = ({ loadUserData, details, token, login, address, API_URL, er
 
   if (isLoading) return <LoadingScreen />
   if (error) {
-    return <h2>Some Error Occured...Please Check Your Internet connection and Try Again</h2>
+    return <div id="msg-body">
+      <h2 id='msg-txt'>Some Error Occured...</h2>
+    </div>
   }
   if (login === false) {
     return (
-      <>
-        <h2>Please Login To Load this Page</h2>
-        <NavLink to={'/users'}>LoginPage</NavLink>
-      </>
+      <div id="msg-body">
+        <h2 id='msg-txt'>Please Login To Load this Page...</h2>
+        <NavLink id='msg-btn' to={'/users'}>LoginPage</NavLink>
+      </div>
     )
   }
   return (
@@ -114,7 +116,7 @@ const UserDetails = ({ loadUserData, details, token, login, address, API_URL, er
               <FaUser className='user-icons' />
             </div>
             <div className="user-name">
-              <p style={{ alignSelf: 'center' }}>{details.firstname && `Hi, ${details.lastname} ${details.firstname}`}</p>
+              <p style={{ alignSelf: 'center' }}>{details.firstname && details.lastname ? `Hi, ${details.lastname} ${details.firstname}` : `Hi, ${details.firstname}`}</p>
               <pre><b>Username:</b><br /> {details.username}</pre>
               <pre><b>email:</b><br /> {details.email}</pre>
               <pre><b>Phone No:</b><br /> {details.phone}</pre>

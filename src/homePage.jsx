@@ -46,18 +46,20 @@ const HomePage = ({ loadUserData, cart, token, error, login, details, API_URL })
     setTimeout(() => {
       setErrorMsg('')
     }, 5000)
-    return <h2>{errorMsg}</h2>
+    return <div id="msg-body">
+      <h2 id='msg-txt'>{errorMsg}</h2>
+    </div>
   }
 
-  if (error === "Internal Server Error....please Check your Internet Connection And Try Again") {
-    return <h2>Some Error Occured...Please Check Your Internet connection and Try Again</h2>
+  if (error) {
+    return <div id="msg-body">
+      <h2 id="msg-txt">Some Error Occured...</h2>
+    </div>
   }
   
   return (
     <>
-
       <NavBar token={token} API_URL={API_URL} cart={cart} logIn={login} details={details} />
-
 
       {/* Products Container  */}
       <div className="cover-products">NO PRODUCT IN DISPLAY</div>

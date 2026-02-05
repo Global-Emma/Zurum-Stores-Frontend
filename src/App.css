@@ -345,6 +345,37 @@ select:hover{
   margin-left: 4%
 }
 
+/* Error messages and few display pages */
+#msg-body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#msg-txt{
+  background: #fff;
+  color: red;
+  text-align: center;
+}
+
+#msg-btn{
+  background: #000;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  transition: transform .3s ease
+}
+
+#msg-btn:hover{
+  transform: scale(.9);
+}
+
 @media (min-width: 1555px) {
   .all-products {
     grid-template-columns: repeat(7, 1fr)

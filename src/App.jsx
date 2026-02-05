@@ -108,9 +108,9 @@ function App() {
 
       <Route path='*' element={<NotFoundPage />} />
 
-      <Route path='/payment-success' element={<div className='payment-success-page'><h1>Payment Successful!</h1><p>Thank you for your purchase. Your payment has been processed successfully.</p><button onClick={() => window.location.href = '/orders'}>View Your Orders</button></div>} />
+      <Route path='/payment-success' element={<div id='msg-body'><h1 id='msg-txt' >Payment Successful!</h1><p>Thank you for your purchase. Your payment has been processed successfully.</p><button id='msg-btn' onClick={() => window.location.href = '/orders'}>View Your Orders</button></div>} />
 
-      <Route path='/payment-failure' element={<div className='payment-failure-page'><h1>Payment Failed</h1><p>Unfortunately, your payment could not be processed. Please try again.</p><button onClick={() => window.location.href = '/cart'}>Return to Cart</button></div>} />
+      <Route path='/payment-failure' element={<div id='msg-body'><h1 id='msg-txt' >Payment Failed</h1><p>Unfortunately, your payment could not be processed. Please try again.</p><button id="msg-btn" onClick={() => window.location.href = '/cart'}>Return to Cart</button></div>} />
 
       <Route path='/verify-payment' element={<Payment token={token} API_URL={API_URL} loadUserData={getUserData} />} />
     </Routes>

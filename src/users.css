@@ -52,7 +52,7 @@ body {
   border: none;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 5px 10px;
+  padding: 20px;
 }
 
 .sign-in-form label,
@@ -69,6 +69,7 @@ body {
   width: 200px;
   background: #6d660d;
   color: #fff;
+  padding: 10px;
   text-align: center;
   transition: .5s ease;
   align-self: center;

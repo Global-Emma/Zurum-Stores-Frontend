@@ -101,7 +101,7 @@ const NavBar = ({ cart, API_URL, details, token }) => {
         </div>
 
         <div className="user-details">
-          <p>Hey, {details.username ? details.username : 'user'}</p>
+          <p>Hey, {details.firstname ? details.firstname : 'user'}</p>
         </div>
 
         {!showLinks && <MdKeyboardArrowDown className='drop-icon' />}
