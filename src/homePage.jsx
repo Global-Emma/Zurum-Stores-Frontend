@@ -50,12 +50,6 @@ const HomePage = ({ loadUserData, cart, token, error, login, details, API_URL })
       <h2 id='msg-txt'>{errorMsg}</h2>
     </div>
   }
-
-  if (error) {
-    return <div id="msg-body">
-      <h2 id="msg-txt">Some Error Occured...</h2>
-    </div>
-  }
   
   return (
     <>
