@@ -92,6 +92,7 @@ const HomePage = ({ loadUserData, cart, token, error, login, details, API_URL })
             <button className="cart-btn" onClick={
               async () => {
                 if (login === false) {
+                  alert('Please Login To Continue')
                   navigate('/users')
                 }
                 setPopup(true)
