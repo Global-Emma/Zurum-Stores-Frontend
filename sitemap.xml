@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://zurum-stores-frontend.vercel.app/</loc>
+  </url>
+
+  <url>
+    <loc>https://zurum-stores-frontend.vercel.app/cart</loc>
+  </url>
+
+  <url>
+    <loc>https://zurum-stores-frontend.vercel.app/orders</loc>
+  </url>
+
+  <url>
+    <loc>https://zurum-stores-frontend.vercel.app/users</loc>
+  </url>
+
+</urlset>
