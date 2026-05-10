@@ -41,6 +41,7 @@ axios.interceptors.response.use(
         localStorage.setItem('isLoggedIn', JSON.stringify(false))
         if(axios.isAxiosError(error)){
           localStorage.setItem('error', JSON.stringify(error.response.data.message))
+          alert('Session expired please Login again to continue')
           window.location.href = '/users'
         }
       }
