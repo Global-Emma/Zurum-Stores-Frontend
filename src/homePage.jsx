@@ -10,8 +10,6 @@ const HomePage = ({ loadUserData, cart, token, error, login, details, API_URL })
 
   const [homeUpdate, setHomeUpdate] = useState(0);
 
-  document.title = 'Amazon(React)'
-
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true)
   const [popup, setPopup] = useState(false)
